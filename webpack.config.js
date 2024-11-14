@@ -1,47 +1,43 @@
 const path = require('path');
-const webpack = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              plugins: [
-                'react-refresh/babel'
-              ]
-            }
-          }
-        ]
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin()
+    new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
   ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
     hot: true,
-    contentBase: './public',
-    port: 3000
-  }
+    port: 3000,
+    open: true,
+  },
 }; 
