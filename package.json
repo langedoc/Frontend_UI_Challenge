@@ -1,0 +1,23 @@
+{
+  "name": "frontend_ui_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/langedoc/Frontend_UI_Challenge.git"
+  },
+  "author": "YuliaKapustina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/langedoc/Frontend_UI_Challenge/issues"
+  },
+  "homepage": "https://github.com/langedoc/Frontend_UI_Challenge#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
