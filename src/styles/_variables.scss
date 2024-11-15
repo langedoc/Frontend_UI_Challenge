@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//Colors
+$background-color: black;
+$primary-color: white;
+$popular-movies-color: #06022f;
+$upcoming-movies-color: #63006c;
+$top-rated-movies-color: #780000;
+
+// Typography & Font Sizes
+$font-family: 'Poppins', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 24px;
+$line-height-base: 1.5;
+
+//Spacing
+$spacing-small: 8px;
+$spacing-base: 16px;
+$spacing-large: 24px;
+
+//Border
+$border-radius: 10px;
+$border-width: 1px;
+
+//Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1440px;
