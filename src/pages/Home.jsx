@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMovieContext } from '../contexts/MovieContext';
+import ItemCard from '../components/ItemCard/ItemCard';
 
 export default function Home() {
     const {popularMovies} = useMovieContext();
@@ -7,11 +8,11 @@ export default function Home() {
     return (
         <div>
             <h1>Popular Movies</h1>
-            <di>
+            <div>
                 {popularMovies && popularMovies.map((movie) => (
-                    <h2>{movie.title}</h2>
+                    <ItemCard key={movie.id} movie={movie} />
                 ))}
-            </di>
+            </div>
         </div>
     );
 }
