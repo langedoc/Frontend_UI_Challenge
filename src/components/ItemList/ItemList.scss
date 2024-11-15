@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+
+.item-list {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-small;
+  overflow-y: hidden;
+}
+
+.loading {
+  text-align: center;
+  font-size: $font-size-large;
+}
