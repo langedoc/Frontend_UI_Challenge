@@ -1,6 +1,7 @@
 const path = require('path');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -27,7 +28,8 @@ module.exports = {
     new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    new Dotenv()
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
