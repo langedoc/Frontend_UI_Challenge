@@ -1,7 +1,22 @@
 @use 'variables.scss' as *;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+
+    @media (max-width: $breakpoint-small) {
+        font-size: $font-size-base * 0.8;
+    }
+}
+
 body {
     background-color: $background-color;
     color: $primary-color;
     font-family: $font-family;
+    line-height: $line-height-base;
 }
