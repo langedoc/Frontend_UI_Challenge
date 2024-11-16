@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-xlarge;
-    padding: $spacing-xlarge;
+    padding: $top-header-spacing $spacing-xlarge;
 }
 
 .detailed_main {
