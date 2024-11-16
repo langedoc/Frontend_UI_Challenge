@@ -1,12 +1,15 @@
 import React from 'react';
 import {MovieProvider} from './contexts/MovieContext';
-import Home from './pages/Home/Home';
+// import Home from './pages/Home/Home';
+import Detailed from './pages/Detailed/Detailed';
 import './styles/main.scss';
 
 const App = () => {
+  
   return (
     <MovieProvider>
-      <Home />
+      {/* <Home /> */}
+      <Detailed/>
     </MovieProvider>
   );
 };
