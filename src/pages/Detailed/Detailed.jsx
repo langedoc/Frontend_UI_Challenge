@@ -1,15 +1,17 @@
 import React from 'react';
 import './Detailed.scss';
-import { useMovieContext } from '../../contexts/MovieContext';
-
+import { useLocation } from 'react-router-dom';
 
 export default function Detailed() {
+    const location = useLocation();
+    const movie = location.state?.movie;
     
-    const {popularMovies} = useMovieContext();
-    const movie = popularMovies?.[0];
-
     if (!movie) {
-        return <div>Loading...</div>;
+        return (
+            <div className="detailed">
+                <h3>Please select a movie from the home page</h3>
+            </div>
+        );
     }
     
     return (

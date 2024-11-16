@@ -12,8 +12,15 @@
 
     img {
         height: 30vh;
+        width: auto;
         object-fit: cover;
         border-radius: $border-radius;
+        display: block;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 0.1s ease-in-out;
+        }
     }
 
     h3 {
