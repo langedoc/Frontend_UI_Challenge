@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {MovieProvider} from './contexts/MovieContext';
+import RootLayout from './pages/RootLayout/RootLayout';
 import Home from './pages/Home/Home';
 import Detailed from './pages/Detailed/Detailed';
 import './styles/main.scss';
@@ -8,11 +9,17 @@ import './styles/main.scss';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/detailed",
-    element: <Detailed />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/detailed",
+        element: <Detailed />,
+      },
+    ],
   },
 ]);
 
