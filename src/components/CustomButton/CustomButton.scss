@@ -1,0 +1,12 @@
+@use '../../scss/variables' as *;
+
+.custom-button {
+    background: none;
+    color: $primary-color;
+    border: $border-width solid $primary-color;
+    border-radius: $border-radius;
+    padding: $spacing-small;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+}

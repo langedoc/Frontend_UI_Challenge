@@ -2,6 +2,7 @@ import React from 'react';
 import './Detailed.scss';
 import { useLocation } from 'react-router-dom';
 import { useMovieContext } from '../../contexts/MovieContext';
+import CustomButton from '../../components/CustomButton/CustomButton';
 
 export default function Detailed() {
     const location = useLocation();
@@ -39,9 +40,9 @@ export default function Detailed() {
                 </div>
                 <div className="detailed_main_info">
                     {wishlist.includes(movie) ? (
-                        <button onClick={handleRemoveMovie}>Remove from Wishlist</button>
+                        <CustomButton onClick={handleRemoveMovie}>Remove from Wishlist</CustomButton>
                     ) : (
-                        <button onClick={handleAddMovie}>Add to Wishlist</button>
+                        <CustomButton onClick={handleAddMovie}>Add to Wishlist</CustomButton>
                     )}
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
