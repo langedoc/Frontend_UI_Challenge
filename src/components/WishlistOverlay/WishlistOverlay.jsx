@@ -15,9 +15,13 @@ export default function WishlistOverlay() {
                 <FaWindowClose onClick={()=>setIsWishlistOpen(false)} />
             </div>
             <div className="wishlist-overlay_items">
-                {wishlist.map((movie) => (
-                    <ItemCard key={movie.id} movie={movie} />
-                ))}
+                {wishlist.length===0 ? (
+                    <p>You have no items in yourwishlist yet...</p>
+                ) : (
+                    wishlist.map((movie) => (
+                        <ItemCard key={movie.id} movie={movie} />
+                    ))
+                )}
             </div>
         </div>
     );

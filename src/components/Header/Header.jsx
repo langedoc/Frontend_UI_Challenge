@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.scss';
 import {Link} from 'react-router-dom';
 import { useMovieContext } from '../../contexts/MovieContext';
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function Header() {
 
@@ -12,7 +13,7 @@ export default function Header() {
             <Link to="/" onClick={()=>setIsWishlistOpen(false)}>
                 <h1>MyMovie</h1>
             </Link>
-            <button onClick={()=>setIsWishlistOpen(true)}>MY WISHLIST</button>
+            <CustomButton onClick={()=>setIsWishlistOpen(true)}>MY WISHLIST</CustomButton>
         </header>
     );
 }
