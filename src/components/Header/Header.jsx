@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header className="header">
-            <Link to="/">
+            <Link to="/" onClick={()=>setIsWishlistOpen(false)}>
                 <h1>MyMovie</h1>
             </Link>
             <button onClick={()=>setIsWishlistOpen(true)}>MY WISHLIST</button>

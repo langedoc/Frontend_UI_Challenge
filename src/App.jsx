@@ -4,7 +4,7 @@ import {MovieProvider} from './contexts/MovieContext';
 import RootLayout from './pages/RootLayout/RootLayout';
 import Home from './pages/Home/Home';
 import Detailed from './pages/Detailed/Detailed';
-import './styles/main.scss';
+import './scss/main.scss';
 
 const router = createBrowserRouter([
   {
