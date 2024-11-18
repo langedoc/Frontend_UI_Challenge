@@ -2,6 +2,7 @@ import React from 'react';
 import { useMovieContext } from '../../contexts/MovieContext';
 import ItemList from '../../components/ItemList/ItemList';
 import './Home.scss';
+
 export default function Home() {
     const {popularMovies} = useMovieContext();
     const {upcomingMovies} = useMovieContext();

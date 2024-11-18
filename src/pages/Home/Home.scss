@@ -3,7 +3,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    padding: $spacing-xlarge;
+    padding: $top-header-spacing $spacing-xlarge;
     gap: $spacing-base;
 }
 
