@@ -21,6 +21,10 @@ export default function Detailed() {
             setWishlist([...wishlist, movie]);
         }
     }
+
+    const handleRemoveMovie = () => {
+        setWishlist(wishlist.filter(item => item.id !== movie.id))
+    }
     
     return (
         <div className="detailed">
@@ -34,7 +38,11 @@ export default function Detailed() {
                     />
                 </div>
                 <div className="detailed_main_info">
-                    <button onClick={handleAddMovie}>Add to Wishlist</button>
+                    {wishlist.includes(movie) ? (
+                        <button onClick={handleRemoveMovie}>Remove from Wishlist</button>
+                    ) : (
+                        <button onClick={handleAddMovie}>Add to Wishlist</button>
+                    )}
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
                 </div>
