@@ -1,0 +1,36 @@
+@use '../../scss/variables' as *;
+
+.wishlist-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: $background-color;
+    z-index: 100;
+    padding: $spacing-xlarge;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+    overflow: auto;
+}
+
+.wishlist-overlay_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+        width: $spacing-large;
+        height: $spacing-large;
+    }
+}
+
+.wishlist-overlay_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $spacing-base;
+}

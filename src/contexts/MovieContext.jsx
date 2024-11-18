@@ -7,6 +7,8 @@ export const MovieProvider = ({children}) => {
     const [popularMovies, setPopularMovies] = useState([]);
     const [topRatedMovies, setTopRatedMovies] = useState([]);
     const [upcomingMovies, setUpcomingMovies] = useState([]);
+    const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+    const [wishlist, setWishlist] = useState([]);
     
     useEffect (() => {
         const fetchMovies = async () => {
@@ -28,7 +30,7 @@ export const MovieProvider = ({children}) => {
     }, []);
 
     return (
-        <MovieContext.Provider value={{popularMovies, topRatedMovies, upcomingMovies}}>
+        <MovieContext.Provider value={{popularMovies, topRatedMovies, upcomingMovies, isWishlistOpen, setIsWishlistOpen, wishlist, setWishlist}}>
             {children}
         </MovieContext.Provider>
     );
