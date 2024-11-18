@@ -13,6 +13,7 @@
     
     button {
         box-shadow: 0 0 $spacing-base $popular-movies-color;
+        font-family: $popular-movies-font;
     }
 }
 
@@ -22,6 +23,7 @@
     
     button {
         box-shadow: 0 0 $spacing-base $upcoming-movies-color;
+        font-family: $upcoming-movies-font;
     }
 }
 
@@ -31,6 +33,7 @@
 
     button {
         box-shadow: 0 0 $spacing-base $top-rated-movies-color;
+        font-family: $top-rated-movies-color;
     }
 }
 
