@@ -9,6 +9,7 @@
 
 .popular {
     font-family: $popular-movies-font;
+    background: radial-gradient(circle at bottom right, $popular-movies-color, $background-color 35%);
     
     button {
         box-shadow: 0 0 $spacing-base $popular-movies-color;
@@ -17,7 +18,8 @@
 
 .upcoming {
     font-family: $upcoming-movies-font;
-
+    background: radial-gradient(circle at bottom right, $upcoming-movies-color, $background-color 35%);
+    
     button {
         box-shadow: 0 0 $spacing-base $upcoming-movies-color;
     }
@@ -25,6 +27,7 @@
 
 .topRated {
     font-family: $top-rated-movies-font;
+    background: radial-gradient(circle at bottom right, $top-rated-movies-color, $background-color 35%);
 
     button {
         box-shadow: 0 0 $spacing-base $top-rated-movies-color;
