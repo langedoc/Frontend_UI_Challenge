@@ -1,10 +1,12 @@
 import React from 'react';
 import './Detailed.scss';
 import { useLocation } from 'react-router-dom';
+import { useMovieContext } from '../../contexts/MovieContext';
 
 export default function Detailed() {
     const location = useLocation();
     const movie = location.state?.movie;
+    const { setWishlist, wishlist } = useMovieContext();
     
     if (!movie) {
         return (
@@ -12,6 +14,12 @@ export default function Detailed() {
                 <h3>Please select a movie from the home page</h3>
             </div>
         );
+    }
+
+    const handleAddMovie = () => {
+        if (!wishlist.includes(movie)) {
+            setWishlist([...wishlist, movie]);
+        }
     }
     
     return (
@@ -26,7 +34,7 @@ export default function Detailed() {
                     />
                 </div>
                 <div className="detailed_main_info">
-                    <button>Add to Wishlist</button>
+                    <button onClick={handleAddMovie}>Add to Wishlist</button>
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
                 </div>
