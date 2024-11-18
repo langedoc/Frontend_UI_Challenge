@@ -7,7 +7,7 @@ import CustomButton from '../../components/CustomButton/CustomButton';
 export default function Detailed() {
     const location = useLocation();
     const movie = location.state?.movie;
-    const { setWishlist, wishlist } = useMovieContext();
+    const { setWishlist, wishlist, listType } = useMovieContext();
     
     if (!movie) {
         return (
@@ -26,9 +26,19 @@ export default function Detailed() {
     const handleRemoveMovie = () => {
         setWishlist(wishlist.filter(item => item.id !== movie.id))
     }
+
+    const getListStyle = () => {
+        if (listType === "popular") {
+            return "popular";
+        } else if (listType === "upcoming") {
+            return "upcoming";
+        } else if (listType === "topRated") {
+            return "topRated";
+        }
+    }
     
     return (
-        <div className="detailed">
+        <div className={`detailed ${getListStyle()}`}>
             <div className="detailed_main">
                 <div className="detailed_main_poster">
                     <img

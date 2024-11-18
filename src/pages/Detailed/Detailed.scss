@@ -7,6 +7,18 @@
     padding: $top-header-spacing $spacing-xlarge;
 }
 
+.popular {
+    font-family: $popular-movies-font;
+}
+
+.upcoming {
+    font-family: $upcoming-movies-font;
+}
+
+.topRated {
+    font-family: $top-rated-movies-font;
+}
+
 .detailed_main {
     display: flex;
     flex-direction: row;
