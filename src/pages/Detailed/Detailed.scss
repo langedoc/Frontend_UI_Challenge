@@ -4,19 +4,31 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-xlarge;
-    padding: $top-header-spacing $spacing-xlarge;
+    padding: $top-header-spacing+$spacing-base $spacing-xlarge;
 }
 
 .popular {
     font-family: $popular-movies-font;
+    
+    button {
+        box-shadow: 0 0 $spacing-base $popular-movies-color;
+    }
 }
 
 .upcoming {
     font-family: $upcoming-movies-font;
+
+    button {
+        box-shadow: 0 0 $spacing-base $upcoming-movies-color;
+    }
 }
 
 .topRated {
     font-family: $top-rated-movies-font;
+
+    button {
+        box-shadow: 0 0 $spacing-base $top-rated-movies-color;
+    }
 }
 
 .detailed_main {
