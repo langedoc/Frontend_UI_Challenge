@@ -2,14 +2,14 @@ import React from 'react';
 import ItemCard from '../ItemCard/ItemCard';
 import './ItemList.scss';
 
-export default function ItemList({movies}) {
+export default function ItemList({movies, listType}) {
     return (
         <div className="item-list">
             {!movies ? (
                 <div className="loading">Loading...</div>
             ) : (
                 movies.map((movie) => (
-                    <ItemCard key={movie.id} movie={movie} />
+                    <ItemCard key={movie.id} movie={movie} listType={listType} />
                 ))
             )}
         </div>

@@ -14,5 +14,9 @@
 
     h1 {
         font-size: $font-size-logo;
+        background: linear-gradient(to right, $popular-movies-color, $upcoming-movies-color, $top-rated-movies-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
