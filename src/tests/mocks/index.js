@@ -5,5 +5,6 @@ import { topRatedMoviesData } from "./topRatedMoviesData";
 export const mocks = {
     popularMoviesData,
     upcomingMoviesData,
-    topRatedMoviesData
+    topRatedMoviesData,
+    movie: popularMoviesData[0]
 }
