@@ -9,7 +9,7 @@ export default function ItemCard({movie, listType}) {
     const {setListType} = useMovieContext();
     
     return (
-        <div className="item-card">
+        <div className="item-card" data-testid="item-card">
             <Link to="/detailed" state={{movie: movie}} onClick={() => setListType(listType)}>
                 <img
                     src={

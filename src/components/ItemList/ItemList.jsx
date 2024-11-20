@@ -4,7 +4,7 @@ import './ItemList.scss';
 
 export default function ItemList({movies, listType}) {
     return (
-        <div className="item-list">
+        <div className="item-list" data-testid="item-list">
             {!movies ? (
                 <div className="loading">Loading...</div>
             ) : (

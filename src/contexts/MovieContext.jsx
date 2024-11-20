@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import * as ApiClient from "../services/api";
 
-const MovieContext = createContext(null);
+export const MovieContext = createContext(null);
 
 export const MovieProvider = ({children}) => {
     const [popularMovies, setPopularMovies] = useState([]);

@@ -9,7 +9,7 @@ export default function Header() {
     const {setIsWishlistOpen} = useMovieContext();
 
     return (
-        <header className="header">
+        <header className="header" data-testid="header" >
             <Link to="/" onClick={()=>setIsWishlistOpen(false)}>
                 <h1>MyMovie</h1>
             </Link>

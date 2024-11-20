@@ -38,7 +38,7 @@ export default function Detailed() {
     }
     
     return (
-        <div className={`detailed ${getListStyle()}`}>
+        <div className={`detailed ${getListStyle()}`} data-testid="detailed-page">
             <div className="detailed_main">
                 <div className="detailed_main_poster">
                     <img

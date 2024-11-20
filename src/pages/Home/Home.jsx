@@ -4,12 +4,10 @@ import ItemList from '../../components/ItemList/ItemList';
 import './Home.scss';
 
 export default function Home() {
-    const {popularMovies} = useMovieContext();
-    const {upcomingMovies} = useMovieContext();
-    const {topRatedMovies} = useMovieContext();
-
+    const {popularMovies, upcomingMovies, topRatedMovies} = useMovieContext();
+    
     return (
-        <div className="home">
+        <div className="home" data-testid="home-page">
             <div className="home_carousel">
                 <h1>Popular Movies</h1>
                 <ItemList movies={popularMovies} listType="popular" />
