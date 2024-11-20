@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve --mode development --open",
-    "sass": "sass src/scss/main.scss src/css/main.css --watch"
+    "sass": "sass src/scss/main.scss src/css/main.css --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

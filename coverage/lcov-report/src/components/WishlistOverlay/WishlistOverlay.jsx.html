@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,7 +90,10 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,20 +101,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,22 +129,25 @@ import { useMovieContext } from '../../contexts/MovieContext';
 import ItemCard from '../ItemCard/ItemCard';
 import { FaWindowClose } from "react-icons/fa";
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >WishlistOverlay(</span>) {
+export default function WishlistOverlay() {
 &nbsp;
-    const { wishlist, setIsWishlistOpen } = <span class="cstat-no" title="statement not covered" >useMovieContext();</span>
+    const { wishlist, setIsWishlistOpen } = useMovieContext();
     
-<span class="cstat-no" title="statement not covered" >    return (</span>
-        &lt;div className="wishlist-overlay"&gt;
+    return (
+        &lt;div className="wishlist-overlay" data-testid="wishlist-overlay"&gt;
             &lt;div className="wishlist-overlay_header"&gt;
                 &lt;h2&gt;MY WISHLIST&lt;/h2&gt;
-                &lt;FaWindowClose onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >setIsWishlistOpen(false)}</span> /&gt;
+                &lt;FaWindowClose 
+                    data-testid="close-button"
+                    onClick={()=&gt;setIsWishlistOpen(false)} 
+                /&gt;
             &lt;/div&gt;
             &lt;div className="wishlist-overlay_items"&gt;
                 {wishlist.length===0 ? (
                     &lt;p&gt;You have no items in yourwishlist yet...&lt;/p&gt;
                 ) : (
-                    wishlist.map(<span class="fstat-no" title="function not covered" >(m</span>ovie) =&gt; (
-<span class="cstat-no" title="statement not covered" >                        &lt;ItemCard key={movie.id} movie={movie} /&gt;</span>
+                    wishlist.map((movie) =&gt; (
+                        &lt;ItemCard key={movie.id} movie={movie} /&gt;
                     ))
                 )}
             &lt;/div&gt;
@@ -151,7 +160,7 @@ export default function <span class="fstat-no" title="function not covered" >Wis
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-19T23:09:06.526Z
+                at 2024-11-20T11:09:26.417Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
