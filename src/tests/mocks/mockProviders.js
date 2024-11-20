@@ -3,7 +3,7 @@ import { MovieContext } from '../../contexts/MovieContext';
 
 export const mockSetListType = jest.fn();
 
-export const CustomMovieProvider = ({ children }) => {
+export const CustomMovieProvider = ({ children, wishlist = [] }) => {
     return (
         <MovieContext.Provider 
             value={{
@@ -12,7 +12,7 @@ export const CustomMovieProvider = ({ children }) => {
                 upcomingMovies: [],
                 isWishlistOpen: false,
                 setIsWishlistOpen: jest.fn(),
-                wishlist: [],
+                wishlist: wishlist,
                 setWishlist: jest.fn(),
                 listType: 'popular',
                 setListType: mockSetListType

@@ -9,10 +9,13 @@ export default function WishlistOverlay() {
     const { wishlist, setIsWishlistOpen } = useMovieContext();
     
     return (
-        <div className="wishlist-overlay">
+        <div className="wishlist-overlay" data-testid="wishlist-overlay">
             <div className="wishlist-overlay_header">
                 <h2>MY WISHLIST</h2>
-                <FaWindowClose onClick={()=>setIsWishlistOpen(false)} />
+                <FaWindowClose 
+                    data-testid="close-button"
+                    onClick={()=>setIsWishlistOpen(false)} 
+                />
             </div>
             <div className="wishlist-overlay_items">
                 {wishlist.length===0 ? (
