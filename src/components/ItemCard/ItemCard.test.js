@@ -9,8 +9,6 @@ import { mocks } from '../../tests/mocks';
 // Mock the API client
 jest.mock('../../services/api', () => ({
     getPopularMovies: jest.fn(() => Promise.resolve({ results: [] })),
-    getTopRatedMovies: jest.fn(() => Promise.resolve({ results: [] })),
-    getUpcomingMovies: jest.fn(() => Promise.resolve({ results: [] })),
 }));
 
 
